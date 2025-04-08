@@ -1,7 +1,9 @@
 import { Stack } from "expo-router";
-import WelcomePage from "./welcome";
-import {DarkTheme, DefaultTheme, ThemeProvider} from '@react-navigation/native'
-import {useColorScheme} from 'react-native'
+import { Component } from 'react';
+import SignInPage from "./sign-in";
+// import WelcomePage from "./welcome";
+// import {DarkTheme, DefaultTheme, ThemeProvider} from '@react-navigation/native'
+// import {useColorScheme} from 'react-native'
 export default function RootLayout() {
   return (
       // <ThemeProvider value ={useColorScheme()==='dark' ? DarkTheme: DefaultTheme}>
@@ -12,6 +14,7 @@ export default function RootLayout() {
       //   </Stack>
       // </ThemeProvider>
       <Stack>
+          {/* <Stack.Screen name = "SignInPage" options={{ headerShown: false }} /> */}
           <Stack.Screen name = "(tabs)" options={{ headerShown: false }} />
       </Stack>
   );

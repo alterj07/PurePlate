@@ -1,15 +1,25 @@
-// import { Stack } from 'expo-router';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import MainCamera from "./OpenCamera";
-import IndexPage from "./HomeScreen";
+import { Tabs } from 'expo-router';
+import { Component } from 'react';
+import SignInPage from '../../sign-in';
+// import { Ionicons } from '@expo/vector-icons';
 
-const Stack = createNativeStackNavigator();
-export default function HomeLayout() {
-  
+
+
+export default function TabLayout() {
   return (
-    <Stack.Navigator>
-       <Stack.Screen name="HomeScreen" component = {IndexPage} options={{headerShown:false}}/>
-       <Stack.Screen name = "MainCamera" component={MainCamera} />
-    </Stack.Navigator>
+    <Tabs screenOptions={{ tabBarActiveTintColor: 'lightblue', headerShown: false }}>
+      <Tabs.Screen
+        name="Index"
+        options={{
+          title: 'Index',
+          Component: SignInPage,
+          // headerShown: true,
+          // tabBarIcon: ({ color, size } : {color: string; size:number}) => (
+          //   <Ionicons name="checkmark-circle" size={32} color="green" />
+          // )
+        }}
+      />
+      
+    </Tabs>
   );
 }

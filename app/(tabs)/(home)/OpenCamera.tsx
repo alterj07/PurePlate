@@ -9,7 +9,7 @@ function OpenCamera() {
   const [permission, requestPermission] = useCameraPermissions();
 
   const toggleCameraFacing = () => {
-    setFacing(current => (current === 'back' ? 'front' : 'back'));
+    setFacing((current: string) => (current === 'back' ? 'front' : 'back'));
   };
 
   if (!permission) {
@@ -68,6 +68,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: 'white',
+    color: 'green',
   },
 });
