@@ -13,11 +13,11 @@ export default function HomeScreen() {
           style = {styles.featuresLink}>
             View Features
         </Link>
-        {/* <Link 
-          href = "/SignInPage" 
+        <Link 
+          href = "/sign-in" 
           style = {styles.featuresLink}>
             Sign In!
-        </Link> */}
+        </Link>
       </View>
       <CameraButton />
       <BottomNavBar />
