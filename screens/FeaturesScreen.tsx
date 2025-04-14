@@ -1,6 +1,6 @@
 import {Text, View, StyleSheet} from 'react-native';
 import {Link} from 'expo-router';
-import CameraButton from "../../../components/cameraButton";
+import CameraButton from "@/components/cameraButton";
 
 
 export default function FeaturesScreen() {

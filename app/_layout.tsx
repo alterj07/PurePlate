@@ -14,8 +14,8 @@ export default function RootLayout() {
       //   </Stack>
       // </ThemeProvider>
       <Stack>
-          {/* <Stack.Screen name = "SignInPage" options={{ headerShown: false }} /> */}
           <Stack.Screen name = "(tabs)" options={{ headerShown: false }} />
+          {/* <Stack.Screen name = "SignInPage" component={SignInPage} options={{ headerShown: false }} /> */}
       </Stack>
   );
 }

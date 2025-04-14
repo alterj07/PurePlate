@@ -1,25 +1,53 @@
 import { Tabs } from 'expo-router';
-import { Component } from 'react';
-import SignInPage from '../../sign-in';
-// import { Ionicons } from '@expo/vector-icons';
+import React from 'react';
+
+import TabBarIcon from '@/components/navigation/TabBarIcon';
+
 
 
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'lightblue', headerShown: false }}>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: 'lightblue', 
+        headerShown: false 
+      }}>
       <Tabs.Screen
-        name="Index"
+        name="index"
         options={{
-          title: 'Index',
-          Component: SignInPage,
-          // headerShown: true,
-          // tabBarIcon: ({ color, size } : {color: string; size:number}) => (
-          //   <Ionicons name="checkmark-circle" size={32} color="green" />
-          // )
+          title: 'Home',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+          ),
         }}
       />
-      
+      <Tabs.Screen
+        name="OpenCamera"
+        options={{
+          title: 'Camera',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'camera' : 'camera-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="LocationScreen"
+        options={{
+          title: 'Location',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'location' : 'location-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="HotDogCamera"
+        options={{
+          title: "HotDog",
+          tabBarIcon: ({ color, focused}) => (
+            <TabBarIcon name={focused ? 'camera' : 'camera-outline'} color={color} />
+          )
+        }} />
     </Tabs>
   );
 }

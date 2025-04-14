@@ -1,3 +1,4 @@
+import SignInPage from '@/screens/SignInPage';
 import {Tabs, Stack} from 'expo-router';
 
 export default function TabLayout(){

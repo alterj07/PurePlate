@@ -1,15 +1,7 @@
-import {View, Text, StyleSheet} from 'react-native';
+import SignInPage from '@/screens/SignInPage';
 
-export default function SignInPage() {
+export default function SignIn() {
     return (
-        <View style = {styles.signInContainer}>
-            <Text>Sign In Page</Text>
-        </View>
+        <SignInPage />
     )
 }
-
-const styles = StyleSheet.create({
-    signInContainer: {
-        backgroundColor: 'red',
-    }
-})
