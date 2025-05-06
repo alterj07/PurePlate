@@ -40,4 +40,9 @@ app-example
 
 
 #models
-assets/models/hotdog
+assets/models/hotdog/*.bin
+assets/models/hotdog/*.json
+assets/models/hotdog/*.h5
+
+#certificates
+certs
