@@ -46,3 +46,6 @@ assets/models/hotdog/*.h5
 
 #certificates
 certs
+
+#ios
+ios/
